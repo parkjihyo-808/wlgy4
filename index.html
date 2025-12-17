@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <style>
+        /* 깔끔한 폰트와 여백 설정 */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff; 
+            color: #111;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 120px auto;
+            padding: 0 20px;
+        }
+
+        /* 이름: 간결하고 힘 있게 */
+        .intro {
+            border-left: 2px solid #111;
+            padding-left: 20px;
+            margin-bottom: 100px;
+        }
+        .intro h1 {
+            font-size: 40px;
+            font-weight: 300; /* 얇은 글씨체로 모던함 강조 */
+            margin: 0;
+            letter-spacing: -1px;
+        }
+        .intro strong { font-weight: 700; }
+
+        /* 사진 리스트: 세로로 나열하여 시선이 편안함 */
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        /* 홀수/짝수 순서를 바꿔서 지루하지 않게 배치 */
+        .list-item:nth-child(even) { flex-direction: row-reverse; text-align: right; }
+
+        .image-box {
+            flex: 1;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        .image-box img {
+            width: 100%;
+            display: block;
+            filter: grayscale(20%); /* 약간의 회색톤으로 차분하게 */
+            transition: 0.5s;
+        }
+        .image-box img:hover { filter: grayscale(0%); transform: scale(1.05); }
+
+        .text-box { flex: 1; }
+        .text-box h2 { font-size: 20px; margin-bottom: 10px; }
+        .text-box p { color: #666; font-size: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="intro">
+            <h1>안녕하세요. <strong>박지효</strong>입니다.</h1>
+        </header>
+
+        <main>
+            <div class="list-item">
+                <div class="image-box">
+                    <img src="cat.jepg">
+                </div>
+                <div class="text-box">
+                    <h2>고양이</h2>
+                    <p>작은 털동생 금동이를 키웁니다.</p>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <div class="image-box">
+                    <img src="book.jpg">
+                </div>
+                <div class="text-box">
+                    <h2>책 읽기</h2>
+                    <p>방 안에서 조용히 책 읽기.</p>
+                </div>
+            </div>
+
+            <div class="list-item">
+                <div class="image-box">
+                    <img src="matcha.jpg">
+                </div>
+                <div class="text-box">
+                    <h2>말차맛 간식/h2>
+                    <p>씁쓸한 맛이 매력적.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
